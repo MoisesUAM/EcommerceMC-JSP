@@ -16,17 +16,17 @@
     </div>
     <div class="d-flex justify-content-center">
         <div class="container-sm">
-            <div class="d-flex justify-content-around">
-              <div class="row-cols-4 mb-3">
-                   <a role="button" href="#" class="btn btn-outline-dark"><i class="bi bi-plus">&nbsp;Agregar</i></a>
-              </div>
-              <div class="row-cols-6">
-                <form action="">
-                    <div class="mb-3">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="d-grid mb3">
+                        <a role="button" href="#" class="btn btn-outline-dark w-50" ><i class="bi bi-plus">&nbsp;Agregar</i></a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="d-grid mb-3">
                         <input type="text" placeholder="Buscar" class="form-control">
                     </div>
-                </form>
-               </div>
+                </div>
             </div>
             <div class="row">
               <table class="table table-stripped table-hover table-reposive">
@@ -40,13 +40,15 @@
                     </tr>
                 </thead>
                 <tbody>
+<c:forEach items="${persons}" var="person">
                     <tr class="text-center">
-                        <td>111420483</td>
-                        <td>Moises Andres</td>
-                        <td>Coto Salazar</td>
-                        <td>20 may 1982</td>
-                        <td>Costa Rica</td>
+                        <td>${person.dni}</td>
+                        <td>${person.name}</td>
+                        <td>${person.lastName}</td>
+                        <td><fmt:formatDate pattern="dd MMMM YYYY" value="${person.birthDate}"></fmt:formatDate></td>
+                        <td>${person.citizenship}</td>
                     </tr>
+</c:forEach>
                 </tbody>
              </table>
             </div>
