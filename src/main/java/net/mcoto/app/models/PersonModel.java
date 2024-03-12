@@ -16,6 +16,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  *
@@ -27,6 +28,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class PersonModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -50,6 +52,4 @@ public class PersonModel implements Serializable {
     @Column(name = "citizenship")
     private String citizenship;
 
-
-    
 }

@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="d-grid mb3">
-                        <a role="button" href="#" class="btn btn-outline-dark w-50" ><i class="bi bi-plus">&nbsp;Agregar</i></a>
+                        <a role="button" href="persons-upsert" class="btn btn-outline-dark w-25" ><i class="bi bi-bag-plus"></i>&nbsp;Agregar</i></a>
                     </div>
                 </div>
                 <div class="col-sm-4">
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="row">
-              <table class="table table-stripped table-hover table-reposive">
+                <table class="table table-stripped table-hover table-reposive table-sm ms-2 me-2">
                 <thead class="table-dark">
                     <tr class="text-center">
                         <th>DNI</th>
@@ -37,6 +37,7 @@
                         <th>Apellidos</th>
                         <th>Fecha Nacimiento</th>
                         <th>Nacionalidad</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,16 +48,21 @@
                         <td>${person.lastName}</td>
                         <td><fmt:formatDate pattern="dd MMMM YYYY" value="${person.birthDate}"></fmt:formatDate></td>
                         <td>${person.citizenship}</td>
+                        <td class="d-flex justify-content-around">
+                            <a href="persons-upsert?id=${person.id}" class="btn btn-outline-primary" title="Editar"><i class="bi bi-pencil-square"></i></a>
+                            <a onclick="deletePerson('${person.id}', '${person.name}')" role="button" class="btn btn-outline-danger" title="Eliminar"><i class="bi bi-trash"></i></a>
+                        </td>
                     </tr>
 </c:forEach>
                 </tbody>
              </table>
             </div>
         </div>
-    </div> 
+    </div>
 </main>
 </div>
 </div>
+</script>
 <jsp:include page="/WEB-INF/templates/footer.jsp">
     <jsp:param name="lessonName"
                value="Proyecto Ecommerce con Jakarta EE 10" />

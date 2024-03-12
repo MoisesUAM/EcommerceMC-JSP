@@ -6,7 +6,7 @@
         <jta-data-source>StoreDS</jta-data-source>
         <class>net.mcoto.app.models.PersonModel</class>
         <properties>
-            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.level.sql" value="FINE" />
             <property name="eclipselink.loggin.parameters" value="true" />
         </properties>
     </persistence-unit>

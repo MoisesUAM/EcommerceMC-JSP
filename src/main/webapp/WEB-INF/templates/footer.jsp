@@ -6,9 +6,10 @@
     </div>
 </footer>
 
-<script src="resources/lib/jquery/jquery.slim.min.js"></script>
-<script src="resources/lib/sweetalert/sweetalert2.all.min.js"></script>
-<script src="resources/lib/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="resources/js/main.js"></script>
+<script type="text/javascript" src="resources/lib/jquery/jquery.slim.min.js"></script>
+<script type="text/javascript" src="resources/lib/sweetalert/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="resources/lib/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="resources/js/functions.js"></script>
+<script type="text/javascript" src="resources/js/main.js"></script>
 </body>
 </html>
