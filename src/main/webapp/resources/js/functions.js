@@ -1,3 +1,5 @@
+/* global Swal */
+
 function deletePerson(idPersona, nombre) {
     Swal.fire({
         title: "Esta Seguro de esta Accion?",

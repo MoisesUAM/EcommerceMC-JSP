@@ -3,7 +3,7 @@
     <!-- Define Persistence Unit -->
     <persistence-unit name="StorePU" transaction-type="JTA">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <jta-data-source>StoreDS</jta-data-source>
+        <jta-data-source>java:/StoreDS</jta-data-source>
         <class>net.mcoto.app.models.PersonModel</class>
         <properties>
             <property name="eclipselink.logging.level.sql" value="FINE" />
