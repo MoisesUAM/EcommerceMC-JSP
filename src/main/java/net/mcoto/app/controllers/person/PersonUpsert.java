@@ -6,17 +6,17 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Optional;
-import java.util.UUID;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import net.mcoto.app.models.PersonModel;
 import net.mcoto.app.services.IUnitWork;
+import org.hibernate.id.UUIDGenerator;
+
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Optional;
+import java.util.UUID;
 
 @WebServlet(name = "PersonUpsert", urlPatterns = "/persons-upsert")
 public class PersonUpsert extends HttpServlet {
@@ -37,8 +37,16 @@ public class PersonUpsert extends HttpServlet {
             Optional<PersonModel> optPerson = unitWork.persons().findById(UUID.fromString(id));
             if (optPerson.isPresent()) {
                 person = optPerson.orElseThrow();
+                LocalDateTime birthDay = person.getBirthDate().toLocalDateTime();
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                String birthDayFormatted = (birthDay != null) ? birthDay.format(formatter) : "";
+                req.setAttribute("birthDayFormatted", birthDayFormatted);
+            } else {
+                person = new PersonModel();
             }
         }
+
 
         req.setAttribute("person", person);
 
@@ -52,26 +60,26 @@ public class PersonUpsert extends HttpServlet {
         if (id == null || id.isBlank() || id.isEmpty()) {
 
             person = new PersonModel();
-            person.setDni(req.getParameter("dniPerson"));
-            person.setName(req.getParameter("namePerson"));
-            person.setLastName(req.getParameter("lastNamePerson"));
-            // Conversión de la fecha
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            Date parsedDate = null;
-            try {
-                parsedDate = dateFormat.parse(req.getParameter("birthDatePerson"));
-            } catch (ParseException ex) {
-                Logger.getLogger(PersonUpsert.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            person.setBirthDate(parsedDate);
-            person.setCitizenship(req.getParameter("citizenshipPerson"));
-
-            System.out.println("Es una insercion de " + person);
-
-            this.unitWork.persons().save(person);
-
-            resp.sendRedirect("persons");
+            person.setId(UUID);
+        } else {
+            person.setId(UUID.fromString(id));
         }
+        person.setDni(req.getParameter("dniPerson"));
+        person.setName(req.getParameter("namePerson"));
+        person.setLastName(req.getParameter("lastNamePerson"));
+        // Conversión de la fecha
+        String date = req.getParameter("birthDatePerson");
+        LocalDate dateLocal = LocalDate.parse(date);
+        var parsedDate = Timestamp.valueOf(dateLocal.atStartOfDay());
+        person.setBirthDate(parsedDate);
+        person.setCitizenship(req.getParameter("citizenshipPerson"));
+
+        System.out.println("Es una insercion de " + person);
+
+        this.unitWork.persons().saveUpdate(person);
+
+        resp.sendRedirect("persons");
+
     }
 
 }

@@ -1,6 +1,7 @@
-package net.mcoto.repositories;
+package net.mcoto.app.repositories;
 
 import jakarta.ejb.Local;
+
 import java.util.List;
 import java.util.Optional;
 

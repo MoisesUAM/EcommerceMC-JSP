@@ -1,7 +1,8 @@
-package net.mcoto.repositories;
+package net.mcoto.app.repositories;
+
+import java.util.UUID;
 
 import jakarta.ejb.Local;
-import java.util.UUID;
 import net.mcoto.app.models.PersonModel;
 
 @Local

@@ -1,8 +1,12 @@
-package net.mcoto.repositories;
+package net.mcoto.app.repositories;
 
 import jakarta.ejb.Stateless;
-import java.util.UUID;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.persistence.EntityManager;
 import net.mcoto.app.models.PersonModel;
+
+import java.util.UUID;
+
 
 @Stateless
 public class PersonRepositoryImpl extends GenericRepositoryImpl<PersonModel, UUID> implements IPersonRepository {
@@ -10,6 +14,7 @@ public class PersonRepositoryImpl extends GenericRepositoryImpl<PersonModel, UUI
     public PersonRepositoryImpl() {
         super(PersonModel.class);
     }
+
 
     @Override
     public void saveUpdate(PersonModel person) {

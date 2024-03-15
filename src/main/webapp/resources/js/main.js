@@ -17,3 +17,8 @@
     })
 })()
 
+
+$('#toastTest').on('click', function () {
+   
+});
+

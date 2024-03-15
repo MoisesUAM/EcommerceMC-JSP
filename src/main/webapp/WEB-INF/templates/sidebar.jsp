@@ -88,6 +88,9 @@
                             </li>
                             <li class="mb-3"><a class="text-white" href="#"><i class="bi bi-toggles"></i>&nbsp;Roles</a>
                             </li>
+                            <li class="mb-3"><a class="text-white" href="persons"><i
+                                    class="bi bi-person-raised-hand"></i> Personas</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

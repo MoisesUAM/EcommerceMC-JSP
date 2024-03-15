@@ -5,21 +5,25 @@
     <title><%=request.getParameter("pageName")%>
     </title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="resources/images/main-icon.jpg"
-          type="image/x-icon">
-    <link rel="stylesheet" href="resources/css/main.css">
-    <link rel="stylesheet" href="resources/css/cards-products.css">
-    <link rel="stylesheet" href="resources/lib/sweetalert/sweetalert2.min.css">
-    <link rel="stylesheet" href="resources/lib/bootstrap/bootstrap.min.css">
+          type="image/x-icon"/>
+    <link rel="stylesheet" href="resources/css/main.css"/>
+    <link rel="stylesheet" href="resources/css/cards-products.css"/>
+    <link rel="stylesheet" href="resources/lib/sweetalert/sweetalert2.min.css"/>
+    <link rel="stylesheet" href="resources/lib/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="resources/lib/toastr/toastr.css"/>
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
 </head>
 <body>
 <header>
     <nav class="navbar bg-dark navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="${pageContext.request.contextPath}/"><img alt="Logo" style="width: 30px; height: 30px; border-radius: 5px;" src="resources/images/main-icon.jpg"> &nbsp;Store MC</a>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/"><img alt="Logo"
+                                                                                    style="width: 30px; height: 30px; border-radius: 5px;"
+                                                                                    src="resources/images/main-icon.jpg">
+                &nbsp;Store MC</a>
             <button class="navbar-toggler text-white" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false"
