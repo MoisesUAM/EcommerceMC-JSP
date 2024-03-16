@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import net.mcoto.app.models.PersonModel;
 import net.mcoto.app.services.IUnitWork;
-import org.hibernate.id.UUIDGenerator;
 
 import java.io.IOException;
 import java.sql.Timestamp;
@@ -60,7 +59,6 @@ public class PersonUpsert extends HttpServlet {
         if (id == null || id.isBlank() || id.isEmpty()) {
 
             person = new PersonModel();
-            person.setId(UUID);
         } else {
             person.setId(UUID.fromString(id));
         }

@@ -12,6 +12,7 @@ import java.util.List;
 
 import net.mcoto.app.models.PersonModel;
 import net.mcoto.app.services.IUnitWork;
+import org.apache.logging.log4j.core.appender.routing.Route;
 
 @WebServlet(name = "PersonController", urlPatterns = "/persons")
 public class PersonControllers extends HttpServlet {
@@ -22,6 +23,7 @@ public class PersonControllers extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<PersonModel> persons = unitWork.persons().getAll();
+        System.out.println("Cargando listado de personas" + persons);
         req.setAttribute("persons", persons);
 
         req.getRequestDispatcher("/WEB-INF/pages/persons/persons-view.jsp").forward(req, resp);
