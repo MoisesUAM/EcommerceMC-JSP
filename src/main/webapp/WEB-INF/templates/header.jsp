@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="resources/lib/sweetalert/sweetalert2.min.css"/>
     <link rel="stylesheet" href="resources/lib/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="resources/lib/toastr/toastr.css"/>
+    <link rel="stylesheet" href="resources/lib/Tables/datatables/media/css/jquery.dataTables.css"/>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
 </head>
@@ -89,8 +90,11 @@
                             <li>
                                 <hr class="dropdown-divider text-danger">
                             </li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-people-fill"></i>&nbsp;Usuarios</a>
+                            <li><a class="dropdown-item" href="users"><i
+                                    class="bi bi-people-fill"></i>&nbsp;Usuarios</a>
                             </li>
+                            <li><a class="dropdown-item" href="persons"><i class="bi bi-person-raised-hand"></i>
+                                Personas</a></li>
                         </ul>
                     </li>
                     <!-- fin menu administracion -->
@@ -106,3 +110,9 @@
         </div>
     </nav>
 </header>
+<div class="row">
+    <div class="d-flex">
+        <jsp:include page="/WEB-INF/templates/sidebar.jsp"/>
+        <main class="content-main ps-3">
+            <div class="row">
+                <div class="col">

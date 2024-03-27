@@ -66,14 +66,7 @@ public class GenericRepositoryImpl<T, ID> implements IGenericRepository<T, ID> {
 
     @Override
     public void delete(T t) {
-
-        em.getTransaction().begin();
-        try {
-            em.remove(em.merge(t));
-        } catch (Exception e) {
-            em.getTransaction().rollback();
-            System.out.println(e.getMessage());
-        }
+        em.remove(em.merge(t));
     }
 
 }

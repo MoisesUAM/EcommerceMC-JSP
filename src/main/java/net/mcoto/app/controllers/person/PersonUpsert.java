@@ -80,4 +80,15 @@ public class PersonUpsert extends HttpServlet {
 
     }
 
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String idPerson = req.getParameter("id");
+        Optional<PersonModel> person = unitWork.persons().findById(UUID.fromString(idPerson));
+        if (person.isPresent()) {
+            System.out.println("Se eliminara a la Persona" + person.get());
+            unitWork.persons().delete(person.get());
+        }
+
+    }
 }

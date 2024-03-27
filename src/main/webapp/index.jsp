@@ -1,1 +1,1 @@
-<meta http-equiv="refresh" content="0; url=${pageContext.request.contextPath}/persons"/>
+<meta http-equiv="refresh" content="0; url=${pageContext.request.contextPath}/main"/>
