@@ -17,8 +17,22 @@
     })
 })()
 
-
-$('#toastTest').on('click', function () {
-   
+$(function () {
+    let success = $("#alert-success").val();
+    let error = $("#alert-error").val();
+    let info = $("#alert-info").val();
+    let warning = $("#alert-warning").val();
+    if (success !== "") {
+        toastr.success(success);
+    }
+    if (error !== "") {
+        toastr.error(error);
+    }
+    if (info !== "") {
+        toastr.info(info);
+    }
+    if (warning !== "") {
+        toastr.warning(warning);
+    }
 });
 

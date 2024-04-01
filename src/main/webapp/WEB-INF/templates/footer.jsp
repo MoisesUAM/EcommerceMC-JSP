@@ -22,5 +22,11 @@
 <script type="text/javascript" src="resources/lib/bootstrap/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="resources/lib/moment/dist/moment.js"></script>
 <script type="text/javascript" src="resources/js/main.js"></script>
+<c:if test="${alerts != null}">
+    <input type="hidden" id="alert-success" value="${alerts.SUCCESS}">
+    <input type="hidden" id="alert-error" value="${alerts.ERROR}">
+    <input type="hidden" id="alert-info" value="${alerts.INFO}">
+    <input type="hidden" id="alert-warning" value="${alerts.WARNING}">
+</c:if>
 </body>
 </html>

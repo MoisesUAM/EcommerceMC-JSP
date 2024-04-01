@@ -59,12 +59,44 @@ function loadTblUsers(jsonData) {
                     return `
                       <div class="d-flex justify-content-around">
                           <a href="users-upsert?id=${data}" role="button" class="btn btn-outline-primary" title="Editar" style="cursor:pointer;"><i class="bi bi-pencil-square"></i></a>
-                          <a onclick="deleteUser('${row.id}','${row.person.name}')" role="button" class="btn btn-outline-danger" title="Eliminar" style="cursor:pointer;"><i class="bi bi-trash3-fill"></i></a>
+                          <a onclick="deleteUser('${row.id}','${row.userName}')" role="button" class="btn btn-outline-danger" title="Eliminar" style="cursor:pointer;"><i class="bi bi-trash3-fill"></i></a>
                       </div>
                     `;
                 }, className: "dt-body-center"
             }
         ]
     });
+}
+
+function deleteUser(id, name) {
+    Swal.fire({
+        title: '¿Estas seguro?',
+        text: "No podras revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Eliminar a ' + name + '!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: 'users-upsert?id=' + id,  // Url that will be called
+                type: "DELETE",
+                success: function (response) {
+                },
+                error: function (response) {
+                }
+            });
+            Swal.fire({
+                title: "Elemento Borrado!",
+                text: "La el usuario " + name + " fue eliminada con exito!",
+                icon: "success"
+            }).then((result) => {
+                toastr.info("El usuario " + name + " fue eliminado con exito!");
+                location.reload();
+            });
+        }
+    });
+
 }
 

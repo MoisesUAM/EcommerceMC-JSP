@@ -1,5 +1,6 @@
 package net.mcoto.app.config;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -23,6 +24,7 @@ public class GeneralRestController {
     @GET
     @Path("/getAllPersons")
     public Response getAllPerson() {
+
         try {
             List<PersonModel> persons = unitWork.persons().getAll();
             return Response.ok(persons).build();
@@ -36,6 +38,5 @@ public class GeneralRestController {
     public List<UserModel> getAllUsers() {
         return unitWork.users().getAll();
     }
-
 
 }

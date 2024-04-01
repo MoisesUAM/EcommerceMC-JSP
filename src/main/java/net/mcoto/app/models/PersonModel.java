@@ -23,7 +23,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "persons", schema = "EcommerceDB")
 public class PersonModel implements Serializable {
@@ -34,7 +33,7 @@ public class PersonModel implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.UUID)
     @Id
-    @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
+    @Column(name = "id", columnDefinition = "BINARY(16)")
     private UUID id;
 
     @Basic(optional = false)
@@ -53,7 +52,7 @@ public class PersonModel implements Serializable {
     private String citizenship;
 
     @JsonIgnoreProperties({"persons", "user", "person", "hibernateLazyInitializer", "handler"})
-    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "person")
     @Fetch(FetchMode.JOIN)
     private List<UserModel> users;
 
