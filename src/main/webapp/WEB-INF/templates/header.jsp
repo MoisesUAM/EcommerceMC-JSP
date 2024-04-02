@@ -102,6 +102,8 @@
                 <div class="d-flex justify-content-around">
                     <div class="text-white me-5">Hola! moises@gmail.com</div>
                     <div class="text-white ms-5">
+                        <a href="login" class="text-white link-offset-1-hover text-decoration-none"><i
+                                class="bi bi-person-bounding-box"></i>&nbsp;Login</a>
                         <a class="text-white" href="${pageContext.request.contextPath}/"><i
                                 class="bi bi-box-arrow-in-left"></i>&nbsp;Salir</a>
                     </div>

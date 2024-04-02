@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import net.mcoto.app.models.PersonModel;
 import net.mcoto.app.models.UserModel;
 import net.mcoto.app.services.IUnitWork;
+import net.mcoto.app.utils.BCryptManager;
 import net.mcoto.app.utils.ToastAlerts;
 
 import java.io.IOException;
@@ -19,12 +20,10 @@ import java.util.UUID;
 @WebServlet(name = "UserUpsertServlet", urlPatterns = {"/users-upsert"})
 public class UsersUpsert extends HttpServlet {
 
+    private final ToastAlerts toastAlerts = new ToastAlerts();
     @Inject
     private IUnitWork unitWork;
     private Optional<UserModel> user;
-
-    private ToastAlerts toastAlerts = new ToastAlerts();
-
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -85,7 +84,7 @@ public class UsersUpsert extends HttpServlet {
         UserModel user = new UserModel();
         user.setUserName(req.getParameter("userName"));
         user.setEmail(req.getParameter("email"));
-        user.setPassword(req.getParameter("password1"));
+        user.setPassword(BCryptManager.hashPassword(req.getParameter("password1")));
         String isActive = req.getParameter("isActive");
         user.setActive(isActive != null);
         person = unitWork.persons().findById(UUID.fromString(req.getParameter("personId"))).orElseThrow();
