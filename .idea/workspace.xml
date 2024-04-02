@@ -9,22 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Migracion a Hibernate y Wildfly">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/RoleModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/utils/ToastAlerts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/config/GeneralRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/config/GeneralRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/person/PersonUpsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/person/PersonUpsert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/users/UsersUpsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/users/UsersUpsert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/PersonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/PersonModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/IUnitWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/IUnitWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/UnitWorkImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/UnitWorkImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/upsert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/upsert.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/users-functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/users-functions.js" afterDir="false" />
-    </list>
+    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Migracion a Hibernate y Wildfly" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +38,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2eA3nRggcTO2T14Gpg5LfC9Wapy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -75,7 +61,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "preferences.applicationServers",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -171,7 +157,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-temurin-21.0.2-4caba194b151-7da56cdf" />
+        <option value="jdk-21.0.1-temurin-21.0.1-4caba194b151-b7b86d5d" />
+        <option value="jdk-21.0.1-temurin-21.0.1-f644763e9732-a3c558b9" />
       </set>
     </attachedChunks>
   </component>
@@ -192,6 +179,7 @@
       <workItem from="1711858955462" duration="10000" />
       <workItem from="1711859621663" duration="2262000" />
       <workItem from="1711911337503" duration="9105000" />
+      <workItem from="1712026663144" duration="181000" />
     </task>
     <task id="LOCAL-00001" summary="Migracion a Hibernate y Wildfly">
       <option name="closed" value="true" />
