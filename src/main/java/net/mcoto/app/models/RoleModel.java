@@ -2,6 +2,10 @@ package net.mcoto.app.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
@@ -11,6 +15,10 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "roles", schema = "EcommerceDB")
 public class RoleModel implements Serializable {
@@ -26,6 +34,10 @@ public class RoleModel implements Serializable {
     @Basic
     @Column(name = "roleName")
     private String roleName;
+
+    @Basic
+    @Column(name = "roleDescription")
+    private String roleDescription;
 
     @Basic
     @Column(name = "isActive")

@@ -8,6 +8,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import net.mcoto.app.models.PersonModel;
+import net.mcoto.app.models.RoleModel;
 import net.mcoto.app.models.UserModel;
 import net.mcoto.app.services.IUnitWork;
 
@@ -37,6 +38,12 @@ public class GeneralRestController {
     @Path("/getAllUsers")
     public List<UserModel> getAllUsers() {
         return unitWork.users().getAll();
+    }
+
+    @GET
+    @Path("/getAllRoles")
+    public List<RoleModel> getAllRoles() {
+        return unitWork.roles().getAll();
     }
 
 }

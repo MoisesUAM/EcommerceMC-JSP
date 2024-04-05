@@ -84,9 +84,9 @@
                 <div id="access-menu" class="accordion-collapse collapse" data-bs-parent="#access-menu">
                     <div class="accordion-body">
                         <ul data-bs-theme="dark">
-                            <li class="mb-3"><a class="text-white" href="#"><i class="bi bi-people-fill"></i>&nbsp;Usuarios</a>
+                            <li class="mb-3"><a class="text-white" href="users"><i class="bi bi-people-fill"></i>&nbsp;Usuarios</a>
                             </li>
-                            <li class="mb-3"><a class="text-white" href="#"><i class="bi bi-toggles"></i>&nbsp;Roles</a>
+                            <li class="mb-3"><a class="text-white" href="role"><i class="bi bi-toggles"></i>&nbsp;Roles</a>
                             </li>
                             <li class="mb-3"><a class="text-white" href="persons"><i
                                     class="bi bi-person-raised-hand"></i> Personas</a>
