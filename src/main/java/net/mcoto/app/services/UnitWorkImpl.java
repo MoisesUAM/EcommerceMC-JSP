@@ -5,6 +5,7 @@ import jakarta.inject.Inject;
 import net.mcoto.app.repositories.IPersonRepository;
 import net.mcoto.app.repositories.IRoleRepository;
 import net.mcoto.app.repositories.IUserRepository;
+import net.mcoto.app.repositories.IUserRoleRepository;
 
 @Singleton
 public class UnitWorkImpl implements IUnitWork {
@@ -15,6 +16,9 @@ public class UnitWorkImpl implements IUnitWork {
     private IUserRepository users;
     @Inject
     private IRoleRepository roles;
+
+    @Inject
+    private IUserRoleRepository userRoles;
 
 
     @Override
@@ -31,6 +35,11 @@ public class UnitWorkImpl implements IUnitWork {
     @Override
     public IRoleRepository roles() {
         return roles;
+    }
+
+    @Override
+    public IUserRoleRepository userRoles() {
+        return userRoles;
     }
 
 }

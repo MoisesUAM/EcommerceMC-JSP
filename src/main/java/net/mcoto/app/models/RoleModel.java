@@ -45,12 +45,14 @@ public class RoleModel implements Serializable {
 
 
     @JsonIgnoreProperties({"roles", "hibernateLazyInitializer", "handler"})
-    @Fetch(FetchMode.JOIN)
+/*    @Fetch(FetchMode.JOIN)
     @JoinTable(name = "usersRoles",
             joinColumns = @JoinColumn(name = "idRole", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "idUser", referencedColumnName = "id"))
     @ManyToMany
-    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)*/
+    @ManyToMany(mappedBy = "roles")
+    @Fetch(FetchMode.JOIN)
     private List<UserModel> users;
 
 

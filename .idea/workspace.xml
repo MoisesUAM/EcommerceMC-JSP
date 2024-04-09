@@ -9,21 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Migracion a Hibernate y Wildfly">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/auth/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/auth/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/IRoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/RoleRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/auth/role-view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/roles-functions.js" afterDir="false" />
+    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Avanzando con roles">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserRoleModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/IUserRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/UserRoleRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/usersRole-functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/config/GeneralRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/config/GeneralRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/auth/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/auth/RoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/RoleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/RoleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/IUnitWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/IUnitWork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/UnitWorkImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/UnitWorkImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/sidebar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/sidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/auth/role-view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/auth/role-view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/users-view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/users-view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +36,9 @@
       <list>
         <option value="Enum" />
         <option value="Jsp File" />
-        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -47,6 +48,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MoisesUAM&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://MoisesUAM@github.com/MoisesUAM/EcommerceMC-JSP.git&quot;,
+    &quot;accountId&quot;: &quot;f5a4fd72-9850-4b93-9f3d-9c3be35d8293&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -94,7 +107,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="JBoss/WildFly 31.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 31.0.0.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Program Files\Java\jdk-21.0.2.13-hotspot" nameIsGenerated="true">
+    <configuration name="JBoss/WildFly 31.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 31.0.0.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk-21.0.2.13-hotspot" nameIsGenerated="true">
       <option name="BROWSER_ID" value="6e3059eb-27fa-4a77-b185-6a297d875879" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -173,7 +186,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-temurin-21.0.2-4caba194b151-7da56cdf" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -194,6 +208,12 @@
       <workItem from="1711858955462" duration="10000" />
       <workItem from="1711859621663" duration="2262000" />
       <workItem from="1711911337503" duration="9105000" />
+      <workItem from="1712289207294" duration="230000" />
+      <workItem from="1712289685805" duration="568000" />
+      <workItem from="1712355911289" duration="1217000" />
+      <workItem from="1712538332647" duration="4000" />
+      <workItem from="1712549485703" duration="1102000" />
+      <workItem from="1712623088201" duration="8460000" />
     </task>
     <task id="LOCAL-00001" summary="Migracion a Hibernate y Wildfly">
       <option name="closed" value="true" />
@@ -219,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711676736632</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Avanzando con roles">
+      <option name="closed" value="true" />
+      <created>1712288261076</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712288261076</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +255,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Migracion a Hibernate y Wildfly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Migracion a Hibernate y Wildfly" />
+    <MESSAGE value="Avanzando con roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avanzando con roles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -240,11 +269,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/users/UsersUpsert.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -52,12 +52,22 @@ public class UserModel implements Serializable {
 
 
     @JsonIgnoreProperties({"users", "hibernateLazyInitializer", "handler"})
-    @Fetch(FetchMode.JOIN)
+/*    @Fetch(FetchMode.JOIN)
     @JoinTable(name = "usersRoles",
             joinColumns = @JoinColumn(name = "idUser", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "idRole", referencedColumnName = "id"))
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @ManyToMany*/
+
     @ManyToMany
+    @Fetch(FetchMode.JOIN)
+    @JoinTable(name = "usersRoles",
+            joinColumns = {
+                    @JoinColumn(name = "idUser", referencedColumnName = "id")},
+            inverseJoinColumns = {
+                    @JoinColumn(name = "idRole", referencedColumnName = "id")
+            }
+    )
     private List<RoleModel> roles;
 
 }
