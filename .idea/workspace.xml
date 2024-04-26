@@ -9,22 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Avanzando con roles">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserRoleModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/IUserRoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/UserRoleRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/usersRole-functions.js" afterDir="false" />
+    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Se concluye crud de roles y se crea entidad UsuariosRoles">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/auth/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/auth/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/RoleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/RoleModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/IUnitWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/IUnitWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/UnitWorkImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/services/UnitWorkImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/auth/role-view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/auth/role-view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/users-view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/users-view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,33 +59,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JBoss/WildFly Server.JBoss/WildFly 31.0.0.Final.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EcommerceMC_JSP [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EcommerceMC_JSP [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EcommerceMC_JSP [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EcommerceMC_JSP [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.EcommerceMC_JSP [validate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JBoss/WildFly Server.JBoss/WildFly 31.0.0.Final.executor": "Run",
+    "Maven.EcommerceMC_JSP [clean,package].executor": "Run",
+    "Maven.EcommerceMC_JSP [clean].executor": "Run",
+    "Maven.EcommerceMC_JSP [compile].executor": "Run",
+    "Maven.EcommerceMC_JSP [package].executor": "Run",
+    "Maven.EcommerceMC_JSP [validate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean" />
@@ -213,7 +200,11 @@
       <workItem from="1712355911289" duration="1217000" />
       <workItem from="1712538332647" duration="4000" />
       <workItem from="1712549485703" duration="1102000" />
-      <workItem from="1712623088201" duration="8460000" />
+      <workItem from="1712623088201" duration="9152000" />
+      <workItem from="1713279638003" duration="176000" />
+      <workItem from="1713279819950" duration="121000" />
+      <workItem from="1714015608473" duration="34000" />
+      <workItem from="1714015648504" duration="102000" />
     </task>
     <task id="LOCAL-00001" summary="Migracion a Hibernate y Wildfly">
       <option name="closed" value="true" />
@@ -247,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712288261076</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Se concluye crud de roles y se crea entidad UsuariosRoles">
+      <option name="closed" value="true" />
+      <created>1712632309849</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712632309849</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +255,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Migracion a Hibernate y Wildfly" />
     <MESSAGE value="Avanzando con roles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avanzando con roles" />
+    <MESSAGE value="Se concluye crud de roles y se crea entidad UsuariosRoles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se concluye crud de roles y se crea entidad UsuariosRoles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
