@@ -11,7 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Se concluye crud de roles y se crea entidad UsuariosRoles">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/IUserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/IUserRoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/UserRoleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/UserRoleRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +45,12 @@
     &quot;assignee&quot;: &quot;MoisesUAM&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://MoisesUAM@github.com/MoisesUAM/EcommerceMC-JSP.git&quot;,
-    &quot;accountId&quot;: &quot;f5a4fd72-9850-4b93-9f3d-9c3be35d8293&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MoisesUAM/EcommerceMC-JSP.git",
+    "accountId": "880b2f29-0631-4d1a-8879-8b8a981b8b59"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -55,6 +59,7 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2eA3nRggcTO2T14Gpg5LfC9Wapy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,6 +67,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JBoss/WildFly Server.JBoss/WildFly 31.0.0.Final.executor": "Run",
+    "JBoss/WildFly Server.JBoss/WildFly 31.0.1.Final.executor": "Run",
     "Maven.EcommerceMC_JSP [clean,package].executor": "Run",
     "Maven.EcommerceMC_JSP [clean].executor": "Run",
     "Maven.EcommerceMC_JSP [compile].executor": "Run",
@@ -94,12 +100,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="JBoss/WildFly 31.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 31.0.0.Final" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk-21.0.2.13-hotspot" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="6e3059eb-27fa-4a77-b185-6a297d875879" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+    <configuration name="JBoss/WildFly 31.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 31.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="480ed392-ce6d-4caf-b867-2d187d1e58d4" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="EcommerceMC_JSP:war exploded">
           <settings />
@@ -111,11 +114,11 @@
         <option name="DOMAIN" value="false" />
         <option name="SERVER_GROUP" value="main-server-group" />
         <option name="USERNAME" value="mcoto" />
-        <option name="CREDENTIAL_ALIAS" value="22323504-4008-4dd1-8016-a66f52666458" />
+        <option name="CREDENTIAL_ALIAS" value="53ae71ed-6b66-4562-bdc1-7f180ebd020a" />
       </server-settings>
       <predefined_log_file enabled="true" id="JBoss" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="60041" />
+        <option name="DEBUG_PORT" value="54524" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -205,6 +208,7 @@
       <workItem from="1713279819950" duration="121000" />
       <workItem from="1714015608473" duration="34000" />
       <workItem from="1714015648504" duration="102000" />
+      <workItem from="1714874618340" duration="1161000" />
     </task>
     <task id="LOCAL-00001" summary="Migracion a Hibernate y Wildfly">
       <option name="closed" value="true" />

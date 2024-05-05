@@ -8,5 +8,5 @@ import java.util.UUID;
 @Local
 public interface IUserRoleRepository extends IGenericRepository<UserRoleModel, UUID> {
 
-
+    void saveUpdate(UserRoleModel userRole);
 }

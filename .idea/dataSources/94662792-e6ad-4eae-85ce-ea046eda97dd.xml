@@ -4,7 +4,7 @@
     <root id="1">
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <ServerVersion>8.0.36</ServerVersion>
+      <ServerVersion>8.0.37</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
@@ -928,7 +928,7 @@
     </schema>
     <schema id="295" parent="1" name="EcommerceDB">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-04-09.00:39:45</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-05.02:08:38</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="296" parent="1" name="jakarta_course">
@@ -1614,7 +1614,8 @@
       <Position>3</Position>
     </column>
     <column id="438" parent="313" name="roleDescription">
-      <DasType>varchar(100)|0s</DasType>
+      <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <index id="439" parent="313" name="PRIMARY">
@@ -1725,6 +1726,7 @@ idStore</ColNames>
     </column>
     <column id="460" parent="316" name="email">
       <DasType>varchar(50)|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="461" parent="316" name="password">
@@ -1744,6 +1746,7 @@ idStore</ColNames>
     </column>
     <foreign-key id="464" parent="316" name="fk_users_persons">
       <ColNames>idPerson</ColNames>
+      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>persons</RefTableName>
     </foreign-key>

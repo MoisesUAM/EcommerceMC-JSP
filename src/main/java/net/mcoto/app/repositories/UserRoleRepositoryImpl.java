@@ -11,4 +11,13 @@ public class UserRoleRepositoryImpl extends GenericRepositoryImpl<UserRoleModel,
     public UserRoleRepositoryImpl() {
         super(UserRoleModel.class);
     }
+
+    @Override
+    public void saveUpdate(UserRoleModel userRole) {
+        if (userRole.getIdRole() == null || userRole.getIdUser() == null) {
+            save(userRole);
+        } else {
+            update(userRole);
+        }
+    }
 }
