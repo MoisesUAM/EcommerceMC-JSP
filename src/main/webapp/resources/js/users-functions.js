@@ -50,8 +50,20 @@ function loadTblUsers(jsonData) {
                 }, className: "dt-body-center"
             },
             {
-                "data": "password", "render": function () {
-                    return "********";
+                "data": "roles",
+                "render": function (data) {
+                    let items = "";
+                    data.forEach(function (item) {
+                        items += `
+                                 <div class="card bg-primary bg-opacity-75 ms-1 me-1" style="min-width:110px;">
+                                   <p class="card-text text-center text-light fw-bold">${item.roleName}</p>
+                                  </div>
+                        `;
+                    });
+
+                    return `
+                     <div class="d-flex flex-row justify-content-center" style="min-width:fit-content">` + items +
+                        `</div>`;
                 }, className: "dt-body-center"
             },
             {

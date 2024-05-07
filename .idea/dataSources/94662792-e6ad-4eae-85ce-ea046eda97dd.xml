@@ -928,7 +928,7 @@
     </schema>
     <schema id="295" parent="1" name="EcommerceDB">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-05-05.02:08:38</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-05-05.20:30:30</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="296" parent="1" name="jakarta_course">
@@ -1614,7 +1614,7 @@
       <Position>3</Position>
     </column>
     <column id="438" parent="313" name="roleDescription">
-      <DasType>varchar(50)|0s</DasType>
+      <DasType>varchar(150)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>

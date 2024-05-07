@@ -25,7 +25,7 @@
                         <th class="text-center">Usuario</th>
                         <th class="text-center">Email</th>
                         <th class="text-center">Estado</th>
-                        <th class="text-center">Contrasena</th>
+                        <th class="text-center">Roles Asig</th>
                         <th class="text-center"><i class="bi bi-gear-fill"></i> Acciones</th>
                     </tr>
                     </thead>

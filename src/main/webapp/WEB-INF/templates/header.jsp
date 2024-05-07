@@ -88,6 +88,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="role"><i class="bi bi-toggles"></i>&nbsp;Roles</a></li>
                             <li>
+                            <li>
                                 <hr class="dropdown-divider text-danger">
                             </li>
                             <li><a class="dropdown-item" href="users"><i

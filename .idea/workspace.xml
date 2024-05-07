@@ -9,13 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="Se concluye crud de roles y se crea entidad UsuariosRoles">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="9e6c8147-911e-4883-875a-be27de552fb6" name="Changes" comment="-Listo configuracion inicial, para agregar roles y usuario admin por default">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/94662792-e6ad-4eae-85ce-ea046eda97dd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/IUserRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/IUserRoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/UserRoleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/mcoto/app/repositories/UserRoleRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/users-view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/users-view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/users-functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/users-functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
         <option value="JavaScript File" />
       </list>
@@ -45,12 +44,12 @@
     &quot;assignee&quot;: &quot;MoisesUAM&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MoisesUAM/EcommerceMC-JSP.git",
-    "accountId": "880b2f29-0631-4d1a-8879-8b8a981b8b59"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MoisesUAM/EcommerceMC-JSP.git&quot;,
+    &quot;accountId&quot;: &quot;880b2f29-0631-4d1a-8879-8b8a981b8b59&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -102,7 +101,9 @@
   <component name="RunManager">
     <configuration name="JBoss/WildFly 31.0.1.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 31.0.1.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="480ed392-ce6d-4caf-b867-2d187d1e58d4" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="EcommerceMC_JSP:war exploded">
           <settings />
@@ -208,7 +209,8 @@
       <workItem from="1713279819950" duration="121000" />
       <workItem from="1714015608473" duration="34000" />
       <workItem from="1714015648504" duration="102000" />
-      <workItem from="1714874618340" duration="1161000" />
+      <workItem from="1714874618340" duration="1917000" />
+      <workItem from="1714940531207" duration="9818000" />
     </task>
     <task id="LOCAL-00001" summary="Migracion a Hibernate y Wildfly">
       <option name="closed" value="true" />
@@ -250,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712632309849</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-Listo configuracion inicial, para agregar roles y usuario admin por default">
+      <option name="closed" value="true" />
+      <created>1714875916472</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714875916472</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +270,8 @@
     <MESSAGE value="Migracion a Hibernate y Wildfly" />
     <MESSAGE value="Avanzando con roles" />
     <MESSAGE value="Se concluye crud de roles y se crea entidad UsuariosRoles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se concluye crud de roles y se crea entidad UsuariosRoles" />
+    <MESSAGE value="-Listo configuracion inicial, para agregar roles y usuario admin por default" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Listo configuracion inicial, para agregar roles y usuario admin por default" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
