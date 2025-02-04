@@ -3,11 +3,8 @@ package net.mcoto.app.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
-import org.hibernate.annotations.NotFoundAction;
-
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;

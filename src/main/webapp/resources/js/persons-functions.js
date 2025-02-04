@@ -58,6 +58,7 @@ function birthDate(dateToFormat) {
 //Tabla con la libreria datatable
 
 function loadPersonTable(jsonData) {
+	
     tblPersons = $("#tblPersons").DataTable({
         data: jsonData,
         "language": {

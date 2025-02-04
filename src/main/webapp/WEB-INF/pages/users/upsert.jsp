@@ -24,26 +24,26 @@
                         <input type="hidden" name="userId" value="${user.id}">
                         <div class="mb-3">
                             <label for="userName" class="form-label">Nombre de Usuario</label>
-                            <input type="text" class="form-control" id="userName" name="userName" required="true"
+                            <input type="text" class="form-control" id="userName" name="userName" required
                                    value="${user.userName}"/>
                             <div class="invalid-feedback">El campo nombre de usuario es obligatorio</div>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo Electronico</label>
-                            <input type="email" class="form-control" id="email" name="email" required="true"
+                            <input type="email" class="form-control" id="email" name="email" required
                                    value="${user.email}"/>
                             <div class="invalid-feedback">El campo email es obligatorio</div>
                         </div>
                         <div class="mb-3">
                             <label for="password1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password1" name="password1" required="true"
+                            <input type="password" class="form-control" id="password1" name="password1" required
                                    value="${user.password}"/>
                             <div class="invalid-feedback">El campo contraseña es obligatorio</div>
                         </div>
                         <div class="mb-3">
                             <label for="password2" class="form-label">Confirme su Contraseña</label>
                             <input type="password" class="form-control" id="password2" name="password2"
-                                   required="true" value="${user.id == null ? '' : user.password}"/>
+                                   required value="${user.id == null ? '' : user.password}"/>
                             <div class="invalid-feedback">El campo contraseña es obligatorio</div>
                         </div>
                         <div class="mb-3">
@@ -81,7 +81,7 @@
                                        name="isActive" role="menuitemcheckbox"/>
                             </c:if>
                             <label class="form-check-label" for="isActive">Estado = <span
-                                    class="text-${user.active ? 'success' : 'danger'} fw-bolder"> ${user.active ? 'Activo' : 'Inactivo'}</span></p>
+                                    class="text-${user.active ? 'success' : 'danger'} fw-bolder"> ${user.active ? 'Activo' : 'Inactivo'}</span>
                             </label>
                             <div class="invalid-feedback">Debe indicar si el usuario es activo</div>
                         </div>

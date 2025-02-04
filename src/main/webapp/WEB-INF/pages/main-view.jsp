@@ -1,9 +1,4 @@
-<jsp:include page="/WEB-INF/templates/header.jsp">
-    <jsp:param name="pageName" value="Bienvienido | StoreMC"/>
-</jsp:include>
 <%@taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
-
 <div class="container-fluid">
     <div class="row">
         <h2 class="text-center text-dark-emphasis">Bienvenido a
@@ -169,9 +164,3 @@
         </section>
     </div>
 </div>
-
-
-<jsp:include page="/WEB-INF/templates/footer.jsp">
-    <jsp:param name="lessonName"
-               value="Proyecto Ecommerce con Jakarta EE 10"/>
-</jsp:include>

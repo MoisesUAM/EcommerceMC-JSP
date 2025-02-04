@@ -1,0 +1,18 @@
+/* estilos-toastr.css */
+.toast-success {
+  background-color: #113a09!important; /* Verde sólido */
+  opacity: 1 !important; /* Sin transparencia */
+}
+
+.toast-success .toast-message {
+  font-size: 18px !important; /* Tamaño de letra */
+}
+
+.toast-error {
+  background-color: #660404!important; /* Verde sólido */
+  opacity: 1 !important; /* Sin transparencia */
+}
+
+.toast-error .toast-message {
+  font-size: 18px !important; /* Tamaño de letra */
+}

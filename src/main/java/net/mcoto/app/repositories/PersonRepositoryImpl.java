@@ -1,8 +1,6 @@
 package net.mcoto.app.repositories;
 
 import jakarta.ejb.Stateless;
-import jakarta.enterprise.context.RequestScoped;
-import jakarta.persistence.EntityManager;
 import net.mcoto.app.models.PersonModel;
 
 import java.util.UUID;

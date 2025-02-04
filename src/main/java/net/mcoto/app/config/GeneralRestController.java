@@ -1,6 +1,7 @@
 package net.mcoto.app.config;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.List;
+
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -12,38 +13,46 @@ import net.mcoto.app.models.RoleModel;
 import net.mcoto.app.models.UserModel;
 import net.mcoto.app.services.IUnitWork;
 
-import java.util.List;
-
-
 @Path("data")
 @Produces(MediaType.APPLICATION_JSON)
 public class GeneralRestController {
 
-    @Inject
-    private IUnitWork unitWork;
+	@Inject
+	private IUnitWork unitWork;
 
-    @GET
-    @Path("/getAllPersons")
-    public Response getAllPerson() {
+	@GET
+	@Path("/getAllPersons")
+	public Response getAllPerson() {
 
-        try {
-            List<PersonModel> persons = unitWork.persons().getAll();
-            return Response.ok(persons).build();
-        } catch (Exception e) {
-            return Response.status(500).entity(e.getMessage()).build();
-        }
-    }
+		try {
+			List<PersonModel> persons = unitWork.persons().getAll().stream()
+					.filter(p -> !p.getDni().equals("##-####-0001")).toList();
+			return Response.ok(persons).build();
+		} catch (Exception e) {
+			return Response.status(500).entity(e.getMessage()).build();
+		}
+	}
 
-    @GET
-    @Path("/getAllUsers")
-    public List<UserModel> getAllUsers() {
-        return unitWork.users().getAll();
-    }
+	@GET
+	@Path("/getAllUsers")
+	public Response getAllUsers() {
+		try {
+			List<UserModel> users = unitWork.users().getAll();
+			return Response.ok(users).build();
+		} catch (Exception e) {
+			return Response.status(500).entity(e.getMessage()).build();
+		}
+	}
 
-    @GET
-    @Path("/getAllRoles")
-    public List<RoleModel> getAllRoles() {
-        return unitWork.roles().getAll();
-    }
+	@GET
+	@Path("/getAllRoles")
+	public Response getAllRoles() {
+		try {
+			List<RoleModel> roles = unitWork.roles().getAll();
+			return Response.ok(roles).build();
+		} catch (Exception e) {
+			return Response.status(500).entity(e.getMessage()).build();
+		}
+	}
 
 }

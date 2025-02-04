@@ -15,8 +15,10 @@ import java.util.UUID;
 
 @WebServlet(name = "RoleController", value = "/role")
 public class RoleController extends HttpServlet {
+	
 
-    private final ToastAlerts toastAlerts = new ToastAlerts();
+    private static final long serialVersionUID = 7414593857172993824L;
+	private final ToastAlerts toastAlerts = new ToastAlerts();
     @Inject
     private IUnitWork unitWork;
 
@@ -36,13 +38,13 @@ public class RoleController extends HttpServlet {
             //Se trata de una actualización
             rol = roleToSaveOrUpdate(req);
             rol.setId(UUID.fromString(id));
-            toastAlerts.SUCCESS("Se ha actualizado el rol");
+            //toastAlerts.SUCCESS("Se ha actualizado el rol");
             req.setAttribute("alerts", toastAlerts);
             unitWork.roles().saveUpdate(rol);
         } else {
             //Se trata de una creación
             rol = roleToSaveOrUpdate(req);
-            toastAlerts.SUCCESS("Se ha creado el rol");
+           // toastAlerts.SUCCESS("Se ha creado el rol");
             req.setAttribute("alerts", toastAlerts);
             unitWork.roles().saveUpdate(rol);
         }

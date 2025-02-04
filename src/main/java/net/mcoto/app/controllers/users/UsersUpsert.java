@@ -19,8 +19,10 @@ import java.util.UUID;
 
 @WebServlet(name = "UserUpsertServlet", urlPatterns = {"/users-upsert"})
 public class UsersUpsert extends HttpServlet {
+	
 
-    private final ToastAlerts toastAlerts = new ToastAlerts();
+    private static final long serialVersionUID = 6519100710649137009L;
+	private final ToastAlerts toastAlerts = new ToastAlerts();
     @Inject
     private IUnitWork unitWork;
     private Optional<UserModel> user;
@@ -51,13 +53,13 @@ public class UsersUpsert extends HttpServlet {
             //se trata de una actualizcion
             user = getUserToSave(req);
             user.setId(UUID.fromString(id));
-            toastAlerts.INFO("Se ha actualizado el usuario");
+            //toastAlerts.INFO("Se ha actualizado el usuario");
             req.setAttribute("alerts", toastAlerts);
             unitWork.users().saveUpdate(user);
         } else {
             //se trata de una creacion
             user = getUserToSave(req);
-            toastAlerts.SUCCESS("Se ha creado el usuario");
+           // toastAlerts.SUCCESS("Se ha creado el usuario");
             req.setAttribute("alerts", toastAlerts);
             unitWork.users().save(user);
         }

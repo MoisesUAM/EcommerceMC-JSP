@@ -1,5 +1,13 @@
 package net.mcoto.app.controllers.person;
 
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Optional;
+import java.util.UUID;
+
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,19 +17,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import net.mcoto.app.models.PersonModel;
 import net.mcoto.app.services.IUnitWork;
 
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-
 @WebServlet(name = "PersonUpsert", urlPatterns = "/persons-upsert")
 public class PersonUpsert extends HttpServlet {
+	
 
-    @Inject
+    private static final long serialVersionUID = 5777459220050238483L;
+
+	@Inject
     private IUnitWork unitWork;
 
     private PersonModel person;

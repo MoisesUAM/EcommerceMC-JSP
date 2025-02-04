@@ -22,19 +22,19 @@
                         <div class="mb-3">
                             <label for="dniPerson" class="form-label">DNI</label>
                             <input type="text" class="form-control" id="dniPerson" name="dniPerson"
-                                   required="true" value="${person.dni}"/>
+                                   required value="${person.dni}"/>
                             <div class="invalid-feedback">El campo DNI es obligatorio</div>
                         </div>
                         <div class="mb-3">
                             <label for="namePerson" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="namePerson" name="namePerson"
-                                   required="true" value="${person.name}"/>
+                                   required value="${person.name}"/>
                             <div class="invalid-feedback">El campo nombre es obligatorio</div>
                         </div>
                         <div class="mb-3">
                             <label for="lastNamePerson" class="form-label">Apellidos</label>
                             <input type="text" class="form-control" id="lastNamePerson" name="lastNamePerson"
-                                   required="true" value="${person.lastName}"/>
+                                   required value="${person.lastName}"/>
                             <div class="invalid-feedback">El campo apellidos es obligatorio</div>
                         </div>
                         <div class="mb-3">

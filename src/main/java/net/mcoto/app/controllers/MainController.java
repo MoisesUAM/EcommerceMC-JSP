@@ -12,6 +12,8 @@ import net.mcoto.app.models.UserModel;
 import net.mcoto.app.models.UserRoleModel;
 import net.mcoto.app.services.IUnitWork;
 import net.mcoto.app.utils.BCryptManager;
+import net.mcoto.app.utils.PN;
+import net.mcoto.app.utils.ToastAlerts;
 
 import java.io.IOException;
 import java.sql.Timestamp;
@@ -19,11 +21,14 @@ import java.sql.Timestamp;
 @WebServlet(name = "MainServlet", urlPatterns = "/main")
 public class MainController extends HttpServlet {
 
-    @Inject
+    private static final long serialVersionUID = -6101227045186398559L;
+	@Inject
     private IUnitWork unitWork;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    	
+    	System.out.println("Entrando a MainController");
 
         //Configuracion inicial en caso de no haber un usuario administrador y roles definidos
         if (unitWork.users().getAll().isEmpty() && unitWork.roles().getAll().isEmpty()) {
@@ -73,7 +78,8 @@ public class MainController extends HttpServlet {
 
 
         }
-
-        req.getRequestDispatcher("/WEB-INF/pages/main-view.jsp").forward(req, resp);
+        req.setAttribute("alerts", new ToastAlerts());
+        req.setAttribute("pageParams", PN.MAIN.getModel());
+        req.getRequestDispatcher("/WEB-INF/pages/layout.jsp").forward(req, resp);
     }
 }

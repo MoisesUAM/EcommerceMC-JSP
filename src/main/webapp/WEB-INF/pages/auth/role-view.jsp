@@ -67,7 +67,7 @@
                                    role="checkbox"
                                    required/>
                             <label class="form-check-label" for="isActive">Estado = <span
-                                    class="text-success fw-bolder">Activo</span></p>
+                                    class="text-success fw-bolder">Activo</span>
                             </label>
                             <div class="invalid-feedback">Debe indicar si el rol es activo</div>
                         </div>
@@ -86,6 +86,7 @@
         <div class="modal-footer">
         </div>
     </div>
+</div>
 </div>
 <jsp:include page="/WEB-INF/templates/footer.jsp">
     <jsp:param name="lessonName"
