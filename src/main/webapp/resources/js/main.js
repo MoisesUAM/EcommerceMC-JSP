@@ -39,7 +39,7 @@ $(function() {
 		"tapToDismiss": false
 	};
 	
-	debugger
+
 	let error = $('#alertError').attr('itemprop');
 	let success = $('#alertSuccess').attr('itemprop');
 	let warning = $('#alertWarning').attr('itemprop');

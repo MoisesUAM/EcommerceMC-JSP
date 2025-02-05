@@ -45,7 +45,7 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/lib/Tables/datatables/media/js/jquery.dataTables.js"></script>
 	<script type="application/javascript" src="${pageContext.request.contextPath}/resources/js/persons-functions.js"></script>
 	<script type="application/javascript" src="${pageContext.request.contextPath}/resources/js/users-functions.js"></script>
-	<script type="application/javascript" src="${pageContext.request.contextPath}/resources/js/usersRole-functions.js"></script>
+	<script type="application/javascript" src="${pageContext.request.contextPath}/resources/js/roles-functions.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/lib/sweetalert/sweetalert2.all.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/lib/bootstrap/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/lib/moment/dist/moment.js"></script>

@@ -16,3 +16,12 @@
 .toast-error .toast-message {
   font-size: 18px !important; /* Tamaño de letra */
 }
+
+.toast-info {
+  background-color: #1a5fb4!important; /* Verde sólido */
+  opacity: 1 !important; /* Sin transparencia */
+}
+
+.toast-info .toast-message {
+  font-size: 18px !important; /* Tamaño de letra */
+}
